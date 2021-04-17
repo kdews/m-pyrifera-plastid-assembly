@@ -1,6 +1,8 @@
 #!/bin/bash
-#SBATCH --partition=cegs
-#SBATCH --time=01:00:00
+#SBATCH -p cegs
+#SBATCH -t 20:00:00
+#SBATCH --mem=8g
+#SBATCH -o fastq_convert.out
 
 reformat.sh in=gk_pacbio/1_A01.fastq.gz out=fastas/1_A01.fasta.gz
 reformat.sh in=gk_pacbio/2_B01.fastq.gz out=fastas/2_B01.fasta.gz
